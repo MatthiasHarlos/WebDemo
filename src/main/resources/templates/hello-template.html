@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Hello world from Thymeleaf!</title>
 </head>
 <body>
-<h1>Hello world!</h1> Now from &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thymeleaf...<a href="https://newenergytrading.com" target="_blank" title="LOS GEHTS!"> NewEnergyTrading</a>
+<h1>Hello <span th:text="${name}"></span>!</h1> Now from &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thymeleaf...<a href="https://newenergytrading.com" target="_blank" title="LOS GEHTS!"> NewEnergyTrading</a>
 <p><b>teste </b>mich heute!</p>
 
 <div style="width: 600px; float: left">
@@ -15,6 +15,7 @@
     <h2>Sehr gut!</h2>
 </div>
 <div style="width:600px; background-color: red; float: right">
+    <p th:text="${loremipsum}"></p>
     <h1>Die Zukunft von Bitcoin</h1>
     Beim Bitcoin handelt es sich um Open-Source-Software, wodurch die Community ständig an neuen technologischen Weiterentwicklungen, Neuerungen und Features arbeitet. Zwei der derzeit interessantesten und vielversprechendsten Entwicklungen sind die sog. "Schnorr-Signaturen" und "MimbleWimble".
     <div>Another Div</div>  <span>Another Span</span> Hello world! Nach Span selbe Zeile!
