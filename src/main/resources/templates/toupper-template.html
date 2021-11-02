@@ -9,6 +9,9 @@
 <p th:text="${originalInput}"></p>
 <h1>toUpper</h1>
 <p th:text="${inputToUpper}"></p>
+<h4>Person</h4>
+<p><span th:text="${person.firstname}"></span> <span th:text="${person.lastname}"></span></p>
+<h4 th:text="${person.getFullName()}"></h4>
 
 </body>
 </html>

@@ -26,6 +26,11 @@ public class HelloWorldController {
     public String toUpper(@RequestParam String firstname,@RequestParam String lastname, Model model) {
         model.addAttribute("originalInput", firstname + " " + lastname);
         model.addAttribute("inputToUpper", firstname.toUpperCase() + "\n" + lastname.toUpperCase());
+
+        Person person = new Person();
+        person.setFirstname("Matthias");
+        person.setLastname("Harlos");
+        model.addAttribute("person", person);
         return "toupper-template";
     }
 }
