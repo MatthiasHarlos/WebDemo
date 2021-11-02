@@ -1,5 +1,6 @@
 package com.newenergytrading.webdemo;
 
+import org.springframework.boot.Banner;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,4 +22,10 @@ public class HelloWorldController {
         return "hello-template";
     }
 
+    @GetMapping("toupper")
+    public String toUpper(@RequestParam String firstname,@RequestParam String lastname, Model model) {
+        model.addAttribute("originalInput", firstname + " " + lastname);
+        model.addAttribute("inputToUpper", firstname.toUpperCase() + "\n" + lastname.toUpperCase());
+        return "toupper-template";
+    }
 }
